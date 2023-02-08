@@ -29,7 +29,21 @@ body {
     height: 200px
 }
 
+.menu.top{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
 
+.menu.top .playlist{
+    display: flex;
+    flex-direction: column;
+    overflow:hidden
+}
+
+.playlist-items{
+    overflow-y: scroll;
+}
 
 /* UTILITY */
 .flexed {
@@ -40,6 +54,12 @@ body {
 }
 .justified-sb {
     justify-content: space-between;
+}
+.flex-grow {
+    flex-grow: 1;
+}
+.direction-col {
+    flex-direction: column;
 }
 .overflow-scroll {
     overflow-y: auto;
@@ -54,6 +74,7 @@ main {
 }
 
 .sidebar {
+    height: calc(100vh - 90px);
     flex-shrink: 0;
     background-color: var(--bg-sidebar);
 }
@@ -115,6 +136,10 @@ aside {
     width: calc(50% - 1rem);
 }
 
+.s-view {
+    display: none;
+}
+
 /* RESPONSIVE*/
 
 /* s view */
@@ -125,6 +150,9 @@ aside {
     }
     .cta {
         width: calc(100% - 230px);
+    }
+    .s-view {
+        display: inline-block;
     }
 }
 
