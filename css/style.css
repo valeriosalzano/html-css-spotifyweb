@@ -23,10 +23,11 @@ html {
 
     --text-white: white;
     --text-gray: #A3A3A3;
+
+    --border-green : #ADFF2F;
 }
 
 /* DEBUG */
-
 
 
 
@@ -63,10 +64,11 @@ html {
 .mg-b-10 {
     margin-bottom: 10px;
 }
-
-
 .pad-t-5 {
     padding-top: 5px;
+}
+.pad-l-20 {
+    padding-left: 20px;
 }
 .text-white {
     color: var(--text-white);
@@ -91,6 +93,7 @@ main {
     background-color: var(--bg-sidebar);
     min-height: 200px;
 }
+
 .menu.top{
     height: calc(100% - 80px);
     min-height: 200px;
@@ -135,14 +138,26 @@ main {
 .categories {
     margin-top: 90px;
     text-align: center;
+    line-height: 2rem;
+    font-size: 0.9rem;
+    font-weight: 700;
 }
-.categories a{
+.categories a {
+    position: relative;
+    display: inline-block;
     text-transform: uppercase;
     color: var(--categories-text);
     text-decoration: none;
+    margin: 0 1rem 1.5rem 0
 }
-
-
+.categories a:hover::after {
+content: '';
+position: absolute;
+bottom: 0;
+left: 25%;
+right: 25%;
+border-bottom: var(--border-green) 2px solid;
+}
 
 .item {
     margin-right: 1rem;
@@ -150,11 +165,34 @@ main {
     text-align: center;
 }
 .item .cover-box{
+    position: relative;
     margin: 1rem 0;
 }
 .item img {
     width: 100%;
+    display: block;
 }
+
+.item:hover .cover-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+.item:hover .cover-box::after {
+    content: '\f144';
+    font-family: "Font Awesome 6 free";
+    font-size: 2.5rem;
+    color: var(--text-white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 h2 {
     color: var(--section-title);
     font-size: 1.5rem;
@@ -213,14 +251,28 @@ body .s-view {
     .sidebar {
         width: 230px;
         text-align: left;
-        padding: 5px 20px;
+        padding: 5px 0;
     }
-    .sidebar .menu li * {
-    vertical-align: middle;
+    .sidebar .menu {
+        font-size: 0.8rem;
+        font-weight: 500;
     }
     .sidebar .menu.top{
         display: flex;
         flex-direction: column;
+    }
+    .sidebar .menu.bottom {
+        margin: 0 20px;
+    }
+    .sidebar .menu li * {
+        vertical-align: middle;
+    }
+    .sidebar a {
+        color: var(--text-gray);
+        font-weight: 500;
+    }
+    .sidebar a:hover {
+        color: var(--text-white);
     }
     .sidebar .logo img {
         height: 40px;
@@ -229,7 +281,27 @@ body .s-view {
     .sidebar .playlist {
         display: flex;
         flex-direction: column;
-        padding-top: 5px;
+        padding-top: 10px;
+    }
+    .sidebar .download-app {
+        border-bottom: gray solid 1px;
+        padding-bottom: 10px;
+    }
+    .sidebar .user .icon {
+        margin-right: 10px;
+    }
+    .sidebar .l-green-bar {
+        padding: 0 20px;
+    }
+    .sidebar .l-green-bar:hover {
+        padding-left: 18px;
+        border-left: 2px solid var(--border-green);
+    }
+    
+    .playlist .title {
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
     }
     .playlist .fa-icon {
         color: var(--text-gray);
@@ -237,22 +309,8 @@ body .s-view {
         font-weight: 800;
         margin-right: 5px;
     }
-    .playlist .title {
-        font-size: 1.2rem;
-        text-transform: uppercase;
-    }
-    .sidebar .menu li * {
-        vertical-align: middle;
-    }
-    .sidebar a {
-        color: var(--text-gray);
-    }
-    .sidebar .download-app {
-        border-bottom: gray solid 1px;
-        padding-bottom: 10px;
-    }
-    .sidebar .user .icon {
-        margin-right: 5px;
+    .playlist span {
+        font-size: 0.9rem;
     }
     
   
