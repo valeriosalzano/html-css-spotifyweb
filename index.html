@@ -4,67 +4,70 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"/> 
         <link rel="stylesheet" href="css/style.css">
         <title>Spotify clone</title>
     </head>
     
     <body>
-        <main class="flexed">
-            <aside class="sidebar flexed direction-col justified-sb">
-                <ul class="menu top">
+        <main class="flexed overflow-hidden">
+            <aside class="sidebar justified-sb pad-t-5">
+                <ul class="menu top overflow-hidden">
                     <li class="logo">
                         <a class="xs-view" href="#">
-                            <img src="#" alt="mobile-logo">
+                            <img src="img/logo-small.svg" alt="mobile-logo">
                         </a>
                         <a class="s-view" href="">
-                            <img class="s" src="#" alt="desktop-logo">
+                            <img src="img/logo.svg" alt="desktop-logo">
                         </a>
                     </li>
                     <li class="home">
                         <a href="#">
-                            <img src="#" alt="home button">
-                            <span class="s-view">Home</span>
+                            <img class="icon" src="img/home.svg" alt="home button">
+                            <span class="s-view text-white">Home</span>
                         </a>
                     </li>
                     <li class="search">
                         <a href="#">
-                            <img src="#" alt="search button">
+                            <img class="icon" src="img/search.svg" alt="search button">
                             <span class="s-view">Cerca</span>
                         </a>
                     </li>
                     <li class="library">
                         <a href="#">
-                            <img src="#" alt="library button">
+                            <img class="icon" src="img/libreria.svg" alt="library button">
                             <span class="s-view">La tua libreria</span>
                         </a>
                     </li>
-                    <li class="playlist s-view">
-                        <a href="">
-                            <img src="#" alt="home button">
+                    <li class="playlist s-view overflow-hidden">
+                        <span class="title mg-b-10 text-white">Playlist</span>
+                        <a class="mg-b-10" href="#">
+                            <i class="fa-icon fa-solid fa-square-plus"></i>
                             <span class="s-view">Crea Playlist</span>
                         </a>
-                        <ul class="playlist-items">
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
+                        <ul class="playlist-items overflow-scroll">
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
                         </ul>
                     </li>
                 </ul>
                 <ul class="menu bottom">
                     <li class="download-app">
-                        <a href="">
-                            FAicon 
+                        <a href="#">
+                            <img class="icon" src="img/download.svg" alt="download app">
                             <span class="s-view">Installa app</span>
                         </a>
                     </li>
                     <li class="user">
-                        <a href="">
-                            <img src="#" alt="user image">
-                            <span class="s-view">John Doe</span>
+                        <a href="#">
+                            <img class="icon" src="img/profile.svg" alt="user image">
+                            <span class="s-view text-white">John Doe</span>
                         </a>
                     </li>
                 </ul>
@@ -88,89 +91,72 @@
                     <h2>sectiontitle</h2>
                     <ul class="items flexed wrapped">
                         <li class="item">
-                            <img src="#" alt="item cover">
-                            <h3>itemTitle</h3>
+                            <img src="img/metal_lifting.jpg" alt="item cover">
+                            <h3>Heavy Metal</h3>
                             <h4>subtitle</h4>
                         </li>
 
                         <li class="item">
-                            <img src="#" alt="item cover">
-                            <h3>itemTitle</h3>
+                            <img src="img/stranger.jpeg" alt="item cover">
+                            <h3>Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h3>
                             <h4>subtitle</h4>
                         </li>
 
                         <li class="item">
-                            <img src="#" alt="item cover">
-                            <h3>itemTitle</h3>
+                            <img src="img/aquietplace.jpeg" alt="item cover">
+                            <h3>A quiet place</h3>
                             <h4>subtitle</h4>
                         </li>
 
                         <li class="item">
-                            <img src="#" alt="item cover">
-                            <h3>itemTitle</h3>
+                            <img src="img/split.jpeg" alt="item cover">
+                            <h3>Split</h3>
                             <h4>subtitle</h4>
                         </li>
 
                         <li class="item">
-                            <img src="#" alt="item cover">
-                            <h3>itemTitle</h3>
+                            <img src="img/cure.jpeg" alt="item cover">
+                            <h3>A cure for wellness</h3>
                             <h4>subtitle</h4>
                         </li>
 
                         <li class="item">
-                            <img src="#" alt="item cover">
-                            <h3>itemTitle</h3>
+                            <img src="img/sinister.jpeg" alt="item cover">
+                            <h3>Sinister</h3>
                             <h4>subtitle</h4>
                         </li>
-
-                        <li class="item">
-                            <img src="#" alt="item cover">
-                            <h3>itemTitle</h3>
-                            <h4>subtitle</h4>
-                        </li>
-                    </ul>
                 </section>
 
                 <section id="created-for">
-                    <h2>sectiontitle</h2>
+                    <h2>Creato per John Doe</h2>
+                    <p class="text-gray">Più ascolti, più accurati saranno i suggerimenti.</p>
                     <ul class="items flexed wrapped">
                         <li class="item">
-                            <img src="#" alt="item cover">
-                            <h3>itemTitle</h3>
+                            <img src="img/radar.jpeg" alt="item cover">
+                            <h3>Release Radar</h3>
                             <h4>subtitle</h4>
                         </li>
 
                         <li class="item">
-                            <img src="#" alt="item cover">
-                            <h3>itemTitle</h3>
-                            <h4>subtitle</h4>
-                        </li>
-
-                        <li class="item">
-                            <img src="#" alt="item cover">
-                            <h3>itemTitle</h3>
+                            <img src="img/mixdaily.jpeg" alt="item cover">
+                            <h3>Daily Mix 1</h3>
                             <h4>subtitle</h4>
                         </li>
                     </ul>
                 </section>
 
                 <section id="popular">
-                    <h2>sectiontitle</h2>
+                    <h2>Artisti più popolari</h2>
+                    <p class="text-gray">Più ascolti, più accurati saranno i suggerimenti.</p>
                     <ul class="items flexed wrapped">
                         <li class="item">
-                            <img src="#" alt="item cover">
+                            <img src="img/youg.jpeg" alt="item cover">
                             <h3>itemTitle</h3>
                             <h4>subtitle</h4>
                         </li>
 
                         <li class="item">
-                            <img src="#" alt="item cover">
-                            <h3>itemTitle</h3>
-                            <h4>subtitle</h4>
-                        </li>
-
-                        <li class="item">
-                            <img src="#" alt="item cover">
+                            <img src="img/einaudi.jpeg" alt="item cover">
                             <h3>itemTitle</h3>
                             <h4>subtitle</h4>
                         </li>
