@@ -555,3 +555,14 @@ footer {
         margin-top: 75p;
     }
 }
+
+/* horizontal scroll when items don't fit in */
+@media screen and (max-width: 991px) {
+    .content .items{
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+    .content .item {
+        flex-shrink: 0;
+    }
+}
