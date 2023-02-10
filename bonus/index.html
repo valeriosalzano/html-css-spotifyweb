@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"/> 
+        <link rel="stylesheet" href="css/style.css">
+        <title>Spotify clone</title>
+    </head>
+    
+    <body>
+        <!-- main start -->
+        <main class="flexed overflow-hidden">
+
+            <!-- sidebar start -->
+            <aside class="sidebar justified-sb pad-t-5">
+                <!-- sidebar top -->
+                <ul class="menu top overflow-hidden">
+                    <li class="logo">
+                        <a class="xs-view" href="#">
+                            <img src="../img/logo-small.svg" alt="mobile-logo">
+                        </a>
+                        <a class="pad-l-20 s-view" href="">
+                            <img src="../img/logo.svg" alt="desktop-logo">
+                        </a>
+                    </li>
+
+                    <li class="home l-green-bar">
+                        <a href="#">
+                            <img class="icon" src="../img/home.svg" alt="home button">
+                            <span class="s-view text-white">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="search l-green-bar">
+                        <a href="#">
+                            <img class="icon" src="../img/search.svg" alt="search button">
+                            <span class="s-view">Cerca</span>
+                        </a>
+                    </li>
+
+                    <li class="library l-green-bar">
+                        <a href="#">
+                            <img class="icon" src="../img/libreria.svg" alt="library button">
+                            <span class="s-view">La tua libreria</span>
+                        </a>
+                    </li>
+
+                    <li class="playlist s-view overflow-hidden">
+                        <span class="title mg-b-10 pad-l-20 text-white">Playlist</span>
+                        <a class="mg-b-10 l-green-bar" href="#">
+                            <i class="text-gray fa-icon fa-solid fa-square-plus"></i>
+                            <span class="s-view">Crea Playlist</span>
+                        </a>
+                        <ul class="playlist-items overflow-scroll pad-l-20">
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- sidebar bottom -->
+                <ul class="menu bottom">
+                    <li class="download-app">
+                        <a href="#">
+                            <img class="icon" src="../img/download.svg" alt="download app">
+                            <span class="s-view">Installa app</span>
+                        </a>
+                    </li>
+
+                    <li class="user">
+                        <a href="#">
+                            <img class="icon" src="../img/profile.svg" alt="user image">
+                            <span class="s-view text-white">John Doe</span>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+            <!-- sidebar end -->
+
+            <!-- content start -->
+            <div class="content overflow-scroll">
+                <!-- call to action -->
+                <div class="cta position-fix">
+                    <a class="btn" href="#">Effettua&nbsp;l'upgrade</a>
+                </div>
+
+                <!-- categories navbar -->
+                <nav class="categories">
+                    <a href="#">in evidenza</a>
+                    <a href="#">podcast</a>
+                    <a href="#">classifiche</a>
+                    <a href="#">generi e mood</a>
+                    <a href="#">nuove uscite</a>
+                    <a href="#">scopri</a>
+                </nav>
+
+                <!-- sections -->
+                <section id="recently-played">
+                    <h2>Recently played</h2>
+                    <ul class="items flexed wrapped">
+                        <li class="item">
+                            <a href="#">
+                                <div class="cover-box">
+                                <img src="../img/metal_lifting.jpg" alt="item cover">
+                                </div>
+                                <h3>Heavy Metal</h3>
+                                <h4>subtitle</h4>
+                            </a> 
+                        </li>
+
+                        <li class="item">
+                            <a href="#">
+                                <div class="cover-box">
+                                    <img src="../img/stranger.jpeg" alt="item cover">
+                                </div>
+                                <h3>Stranger Things, Vol.1 (a Netflix Original Series Soundtrack)</h3>
+                                <h4>Kyle Dixon & Michael Stein</h4>
+                            </a>
+                        </li>
+
+                        <li class="item">
+                            <a href="#">
+                                <div class="cover-box">
+                                    <img src="../img/aquietplace.jpeg" alt="item cover">
+                                </div>
+                                <h3>A quiet place</h3>
+                                <h4>subtitle</h4>
+                            </a> 
+                        </li>
+
+                        <li class="item">
+                            <a href="#">
+                                <div class="cover-box">
+                                    <img src="../img/split.jpeg" alt="item cover">
+                                </div>
+                                <h3>Split</h3>
+                                <h4>subtitle</h4>
+                            </a> 
+                        </li>
+
+                        <li class="item">
+                            <a href="#">
+                                <div class="cover-box">
+                                    <img src="../img/cure.jpeg" alt="item cover">
+                                </div>
+                                <h3>A cure for wellness</h3>
+                                <h4>subtitle</h4>
+                            </a> 
+                        </li>
+
+                        <li class="item">
+                            <a href="#">
+                                <div class="cover-box">
+                                    <img src="../img/sinister.jpeg" alt="item cover">
+                                </div>
+                                <h3>Sinister</h3>
+                                <h4>subtitle</h4>
+                            </a> 
+                        </li>
+                </section>
+
+                <section id="created-for">
+                    <h2>Creato per John Doe</h2>
+                    <p class="text-gray">Più ascolti, più accurati saranno i suggerimenti.</p>
+                    <ul class="items flexed wrapped">
+                        <li class="item">
+                            <a href="#">
+                                <div class="cover-box">
+                                    <img src="../img/radar.jpeg" alt="item cover">
+                                </div>
+                                <h3>Release Radar</h3>
+                                <h4>subtitle</h4>
+                            </a> 
+                        </li>
+
+                        <li class="item">
+                            <a href="#">
+                                <div class="cover-box">
+                                    <img src="../img/mixdaily.jpeg" alt="item cover">
+                                </div>
+                                <h3>Daily Mix 1</h3>
+                                <h4>subtitle</h4>
+                            </a> 
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="popular">
+                    <h2>Artisti più popolari</h2>
+                    <p class="text-gray">Più ascolti, più accurati saranno i suggerimenti.</p>
+                    <ul class="items flexed wrapped">
+                        <li class="item">
+                            <a href="#">
+                                <div class="cover-box circled">
+                                    <img src="../img/youg.jpeg" alt="item cover">
+                                </div>
+                                <h3>Lana Del Ray</h3>
+                            </a> 
+                        </li>
+
+                        <li class="item">
+                            <a href="#">
+                                <div class="cover-box circled">
+                                    <img src="../img/einaudi.jpeg" alt="item cover">
+                                </div>
+                                <h3>Ludovico Einaudi</h3>
+                            </a> 
+                        </li>
+                    </ul>
+                </section>
+
+            </div>
+        </main>
+        <!-- main end -->
+
+        <!-- footer start-->
+        <footer id="player" class="flexed justified-sb aligned-c text-white">
+            <!-- left side -->
+            <div class="left flexed justified-sb aligned-c">
+                <div class="cover">
+                    <img src="../img/sinister.jpeg" alt="track cover">
+                </div>
+
+                <div class="title">
+                    <h3>Sinister</h3>
+                    <a href=""><h4>Nome Autore</h4></a>
+                </div>
+
+                <div class="btns">
+                    <span class="favourite">
+                        <a href="#"><i class= "fa-regular fa-heart"></i></a>
+                    </span>
+                    <span/span class="saved">
+                        <a href="#"><i class=" fa-regular fa-folder"></i></a>
+                    </span>
+                </div>
+            </div>
+
+            <!-- center -->
+            <div class="center flex-grow">
+                <div class="top flexed justified-sb aligned-c">
+                    <a href="#"><i class="fa-solid fa-shuffle"></i></a>
+                    <a href="#"><i class="fa-solid fa-backward-step"></i></a>
+                    <a href="#"><i class="play-button fa-regular fa-circle-play"></i></a>
+                    <a href="#"><i class="fa-solid fa-forward-step"></i></a>
+                    <a href="#"><i class="fa-solid fa-rotate-left"></i></a>
+                </div>
+                <div class="bottom flexed justified-sb aligned-c">
+                    <span id="current-time">0:25</span>
+                    <span class="slider bar position-rel flex-grow" id="time-line">
+                        <div class="progress bar position-abs">
+                            <div class="cursor position-abs hidden"></div>
+                        </div>
+                    </span>
+                    <span id="track-time">4:35</span>
+                </div>
+            </div>
+
+            <!-- right side -->
+            <div class="right flexed justified-sb aligned-c">
+                <div class="playlist">
+                    <a href="#"><i class="fa-solid fa-list"></i></a>
+                </div>
+                <div class="screen">
+                    <a href="#"><i class="fa-solid fa-display"></i></a>
+                </div>
+                <div class="volume flex-grow">
+                    <a href="#"><i class="fa-solid fa-volume-high"></i></a>
+                    <span class="slider bar position-rel" id="volume-bar">
+                        <div class="progress bar position-abs">
+                            <div class="cursor position-abs hidden"></div>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end -->
+    </body>
+
+</html>
