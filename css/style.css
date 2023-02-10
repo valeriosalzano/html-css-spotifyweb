@@ -34,6 +34,8 @@ html {
     --border-green : #ADFF2F;
 }
 
+/* anti-explosion rule */
+
 /* DEBUG */
 
 
@@ -310,6 +312,7 @@ footer {
 
 #player .left ,#player .right {
     width: 220px;
+    min-width: 150px;
 }
 #player .left .cover {
     width: 20%;
@@ -411,6 +414,10 @@ body .s-view {
 
 #current-track {
     max-width: 60%;
+}
+
+footer {
+    overflow-x: auto;
 }
 
 /* RESPONSIVE*/
