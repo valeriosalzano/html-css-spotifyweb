@@ -460,7 +460,9 @@ footer {
     }
     .sidebar li a:hover {
         color: var(--text-white);
-        fill: var(--text-white);
+    }
+    .sidebar a:hover .fa-icon.text-gray{
+        color: var(--text-white);
     }
     .sidebar .logo img {
         height: 40px;
