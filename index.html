@@ -235,9 +235,13 @@
                     <a href="#"><i class="fa-solid fa-forward-step"></i></a>
                     <a href="#"><i class="fa-solid fa-rotate-left"></i></a>
                 </div>
-                <div class="bottom flexed justified-sb">
+                <div class="bottom flexed justified-sb aligned-c">
                     <span id="current-time">0:25</span>
-                    <span class="progress-bar flex-grow" id="time-line"></span>
+                    <span class="slider bar position-rel flex-grow" id="time-line">
+                        <div class="progress bar position-abs">
+                            <div class="cursor position-abs hidden"></div>
+                        </div>
+                    </span>
                     <span id="track-time">4:35</span>
                 </div>
             </div>
@@ -251,7 +255,11 @@
                 </div>
                 <div class="volume flex-grow">
                     <a href="#"><i class="fa-solid fa-volume-high"></i></a>
-                    <div class="progress-bar" id="volume-bar"></div>
+                    <span class="slider bar position-rel" id="volume-bar">
+                        <div class="progress bar position-abs">
+                            <div class="cursor position-abs hidden"></div>
+                        </div>
+                    </span>
                 </div>
                 
             </div>
