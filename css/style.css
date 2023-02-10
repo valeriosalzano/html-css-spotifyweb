@@ -34,15 +34,13 @@ html {
     --border-green : #ADFF2F;
 }
 
-/* anti-explosion rule */
-
 /* DEBUG */
 
 
 
-
-
 /* UTILITY */
+
+/* flex utilities */
 .flexed {
     display: flex;
 }
@@ -64,12 +62,16 @@ html {
 .direction-col {
     flex-direction: column;
 }
+
+/* overflow utilites */
 .overflow-scroll {
     overflow-y: auto;
 }
 .overflow-hidden {
     overflow-y: hidden;
 }
+
+/* position utilities */
 .position-fix {
     position: fixed;
 }
@@ -79,18 +81,22 @@ html {
 .position-abs {
     position: absolute;
 }
+
+/* text utilities */
 .center-text {
     text-align: center;
 }
+.text-white {
+    color: var(--text-white);
+}
+.text-gray {
+    color: var(--text-gray);
+}
+/* display utilities */
 .hidden {
     display: none;
 }
-.mg-r-5 {
-    margin-right: 5px;
-}
-.mg-b-5 {
-    margin-bottom: 5px;
-}
+/* spacing utilities */
 .mg-b-10 {
     margin-bottom: 10px;
 }
@@ -100,13 +106,12 @@ html {
 .pad-l-20 {
     padding-left: 20px;
 }
-.text-white {
-    color: var(--text-white);
-}
-.text-gray {
-    color: var(--text-gray);
-}
-/* STYLE */ 
+
+/* UTILITY END */
+
+/* STYLE */
+
+/* tags */
 ul {
     list-style: none;
 }
@@ -116,7 +121,11 @@ ul a {
 main {
     height: calc(100vh - 90px);
 }
+section > p {
+    font-size: 0.8rem;
+}
 
+/* sidebar */
 .sidebar {
     height: calc(100vh - 90px);
     flex-shrink: 0;
@@ -153,11 +162,13 @@ main {
     border-radius: 50%;
 }
 
+/* content */
 .content {
     width: calc(100% - 50px);
     background-color: var(--bg-content);
     padding: 1.25rem;
 }
+    /* call to action */
 .cta {
     top: 0;
     right: 0;
@@ -184,7 +195,7 @@ main {
 .cta .btn:hover {
     transform: scale(1.1);
 }
-
+    /* categories */
 .categories {
     margin-top: 75px;
     text-align: center;
@@ -211,7 +222,7 @@ left: 25%;
 right: 25%;
 border-bottom: var(--border-green) 2px solid;
 }
-
+    /* items */
 .item {
     margin-right: 1rem;
     margin-bottom: 1rem;
@@ -225,7 +236,6 @@ border-bottom: var(--border-green) 2px solid;
     width: 100%;
     display: block;
 }
-
 .item:hover .cover-box::before {
     content: '';
     position: absolute;
@@ -245,7 +255,6 @@ border-bottom: var(--border-green) 2px solid;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 h2 {
     color: var(--section-title);
     font-size: 1.5rem;
@@ -262,16 +271,13 @@ h4 {
     color: var(--item-subtitle);
     font-size: 0.75rem;
 }
-section > p {
-    font-size: 0.8rem;
-}
 
-footer {
+/* footer */
+#player {
     height: 90px;
     background-color: var(--bg-footer);
     padding: 0px 0.5rem;
 }
-
 #player a{
     color: var(--text-white);
     text-decoration: none;
@@ -279,7 +285,7 @@ footer {
 #player i{
     font-size: 0.9rem;
 }
-    /* general slider dimension */
+    /* slider */
 .bar {
     height: 5px;
     border-radius: 2.5px;
@@ -308,8 +314,9 @@ footer {
     border-radius: 50%;
     transform: translate(50%, -3px);
 }
+    /* slider end */
 
-
+    /* left side */
 #player .left ,#player .right {
     width: 220px;
     min-width: 150px;
@@ -345,7 +352,7 @@ footer {
 #player .left .btns a:hover {
     color: var(--text-white) ;
 }
-
+    /* center  */
 #player .center{ 
     min-width: 250px;
     margin: 0 0.5rem;
@@ -370,14 +377,13 @@ footer {
     font-size: 0.6rem;
     margin: 0 0.3rem;
 }
-#player .bottom .progress {
+#time-line .progress {
     width: 25%;
 }
-
+    /* right side */
 #player .right > * {
     width: 15%;
 }
-
 #player .right .volume {
     min-width: 80px;
 }
@@ -385,13 +391,13 @@ footer {
     width: 70%;
     vertical-align: middle;
 }
-#player .volume .progress {
+#volume-bar .progress {
     width: 80%;
 }
 
 
 
-/* mobile view */
+/* only mobile view rules */
 .sidebar {
     text-align: center;
     width: 50px;
