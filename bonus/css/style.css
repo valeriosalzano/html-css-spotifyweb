@@ -533,7 +533,7 @@ footer {
 }
 
 /* cta disappearing */
-@media screen and (max-height: 450px) {
+@media screen and (max-height: 450px), screen and (orientation: landscape) {
     .cta {
         transition: top 1s;
         top: -90px;
@@ -544,7 +544,7 @@ footer {
         margin-top: 10px;
     }
 }
-@media screen and (min-height: 451px) {
+@media screen and (min-height: 451px) and (orientation: portrait) {
     .cta {
         transition: top 1s;
         top: 0px;
