@@ -236,6 +236,10 @@ border-bottom: var(--border-green) 2px solid;
     width: 100%;
     display: block;
 }
+.item .circled {
+    border-radius: 50%;
+    overflow: hidden;
+}
 .item:hover .cover-box::before {
     content: '';
     position: absolute;
