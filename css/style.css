@@ -24,6 +24,10 @@ html {
     --text-white: white;
     --text-gray: #A3A3A3;
 
+    --btn-cta: white;
+
+    --bar-color: #C1C1C1;
+
     --border-green : #ADFF2F;
 }
 
@@ -43,8 +47,14 @@ html {
 .justified-sb {
     justify-content: space-between;
 }
+.aligned-c{
+    align-items: center;
+}
 .flex-grow {
     flex-grow: 1;
+}
+.flex-shrink {
+    flex-shrink: 2;
 }
 .direction-col {
     flex-direction: column;
@@ -57,6 +67,19 @@ html {
 }
 .position-fix {
     position: fixed;
+}
+.position-rel {
+    position: relative;
+}
+.position-abs {
+    position: absolute;
+}
+.center-text {
+    text-align: center;
+}
+
+.mg-r-5 {
+    margin-right: 5px;
 }
 .mg-b-5 {
     margin-bottom: 5px;
@@ -133,10 +156,30 @@ main {
     right: 0;
     height: 90px;
     background-color: var(--bg-cta);
+    z-index: 9;
+}
+
+.cta .btn {
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    text-align: right;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.5rem 2rem;
+    margin: 1.5rem;
+    color: var(--text-white);
+    border: 2px solid var(--btn-cta);
+    border-radius: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.cta .btn:hover {
+    transform: scale(1.1);
 }
 
 .categories {
-    margin-top: 90px;
+    margin-top: 75px;
     text-align: center;
     line-height: 2rem;
     font-size: 0.9rem;
@@ -149,6 +192,9 @@ main {
     color: var(--categories-text);
     text-decoration: none;
     margin: 0 1rem 1.5rem 0
+}
+.categories a:hover {
+    color: var(--text-white);
 }
 .categories a:hover::after {
 content: '';
@@ -216,7 +262,99 @@ section > p {
 footer {
     height: 90px;
     background-color: var(--bg-footer);
+    padding: 0px 0.5rem;
 }
+
+#player a{
+    color: var(--text-white);
+    text-decoration: none;
+}
+#player i{
+    font-size: 0.9rem;
+}
+    /* general bar dimension */
+#player .progress-bar { 
+    display: inline-block;
+    height: 5px;
+    background-color: var(--bar-color);
+    vertical-align: middle;
+    border-radius: 2.5px;
+}
+
+
+#player .left ,#player .right {
+    width: 220px;
+}
+#player .left .cover {
+    width: 20%;
+    min-width: 50px;
+}
+#player .left img {
+    width: 100%;
+}
+#player .left .title{
+    margin-left: 0.25rem;
+    width: 45%;
+}
+#player h3 {
+    font-size: 0.9rem;
+}
+#player h4 {
+    font-size: 0.6rem;
+}
+#player .left h4:hover{
+    color: var(--text-white);
+    text-decoration: underline;
+}
+#player .left .btns {
+    width: 25%;
+}
+#player .left .btns a {
+    margin: 0.25rem;
+    color: var(--text-gray);
+}
+#player .left .btns a:hover {
+    color: var(--text-white) ;
+}
+
+#player .center{ 
+    min-width: 50%;
+}
+#player .top{
+    margin: 0 auto;
+    padding-bottom: 0.5rem;
+    width: 250px;
+}
+#player .play-button{
+    font-size: 2rem;
+}
+#player .play-button:hover{
+    transform: scale(1.1);
+}
+#player .bottom {
+    min-width: 250px;
+    max-width: 50%;
+    margin: 0 auto;
+}
+#player .bottom span {
+    font-size: 0.6rem;
+}
+#player .bottom .progress-bar {
+    margin: 0.25rem;
+}
+
+#player .right > * {
+    width: 15%;
+}
+
+#player .right .volume {
+    min-width: 80px;
+}
+#player .right .progress-bar {
+    width: 70%;
+}
+
+
 
 /* mobile view */
 .sidebar {
@@ -237,6 +375,10 @@ footer {
 
 body .s-view {
     display: none;
+}
+
+#current-track {
+    max-width: 60%;
 }
 
 /* RESPONSIVE*/
@@ -271,8 +413,9 @@ body .s-view {
         color: var(--text-gray);
         font-weight: 500;
     }
-    .sidebar a:hover {
+    .sidebar li a:hover {
         color: var(--text-white);
+        fill: var(--text-white);
     }
     .sidebar .logo img {
         height: 40px;
@@ -298,22 +441,19 @@ body .s-view {
         border-left: 2px solid var(--border-green);
     }
     
-    .playlist .title {
+    .sidebar .playlist .title {
         font-size: 0.8rem;
         font-weight: 700;
         text-transform: uppercase;
     }
-    .playlist .fa-icon {
-        color: var(--text-gray);
+    .sidebar .playlist .fa-icon {
         font-size: 2rem;
         font-weight: 800;
         margin-right: 5px;
     }
-    .playlist span {
+    .sidebar .playlist span {
         font-size: 0.9rem;
     }
-    
-  
     .cta {
         width: calc(100% - 230px);
     }

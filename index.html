@@ -43,7 +43,7 @@
                     <li class="playlist s-view overflow-hidden">
                         <span class="title mg-b-10 pad-l-20 text-white">Playlist</span>
                         <a class="mg-b-10 l-green-bar" href="#">
-                            <i class="fa-icon fa-solid fa-square-plus"></i>
+                            <i class="text-gray fa-icon fa-solid fa-square-plus"></i>
                             <span class="s-view">Crea Playlist</span>
                         </a>
                         <ul class="playlist-items overflow-scroll pad-l-20">
@@ -75,7 +75,7 @@
 
             <div class="content overflow-scroll">
                 <div class="cta position-fix">
-
+                    <a class="btn" href="#">Effettua l'upgrade</a>
                 </div>
 
                 <nav class="categories">
@@ -206,19 +206,55 @@
             </div>
         </main>
 
-        <footer>
-            <div class="left btns">
+        <footer id="player" class="flexed justified-sb aligned-c text-white">
+            <div class="left flexed justified-sb aligned-c">
+                <div class="cover">
+                    <img src="img/sinister.jpeg" alt="track cover">
+                </div>
 
+                <div class="title">
+                    <h3>Sinister</h3>
+                    <a href=""><h4>Nome Autore</h4></a>
+                </div>
+
+                <div class="btns">
+                    <span class="favourite">
+                        <a href="#"><i class= "fa-regular fa-heart"></i></a>
+                    </span>
+                    <span/span class="saved">
+                        <a href="#"><i class=" fa-regular fa-folder"></i></a>
+                    </span>
+                </div>
             </div>
 
-            <div class="center btns">
-
+            <div class="center flex-grow">
+                <div class="top flexed justified-sb aligned-c">
+                    <a href="#"><i class="fa-solid fa-shuffle"></i></a>
+                    <a href="#"><i class="fa-solid fa-backward-step"></i></a>
+                    <a href="#"><i class="play-button fa-regular fa-circle-play"></i></a>
+                    <a href="#"><i class="fa-solid fa-forward-step"></i></a>
+                    <a href="#"><i class="fa-solid fa-rotate-left"></i></a>
+                </div>
+                <div class="bottom flexed justified-sb">
+                    <span id="current-time">0:25</span>
+                    <span class="progress-bar flex-grow" id="time-line"></span>
+                    <span id="track-time">4:35</span>
+                </div>
             </div>
 
-            <div class="right btns">
-
+            <div class="right flexed justified-sb aligned-c">
+                <div class="playlist">
+                    <a href="#"><i class="fa-solid fa-list"></i></a>
+                </div>
+                <div class="screen">
+                    <a href="#"><i class="fa-solid fa-display"></i></a>
+                </div>
+                <div class="volume flex-grow">
+                    <a href="#"><i class="fa-solid fa-volume-high"></i></a>
+                    <div class="progress-bar" id="volume-bar"></div>
+                </div>
+                
             </div>
-
         </footer>
     </body>
 
