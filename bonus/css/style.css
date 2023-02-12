@@ -127,7 +127,6 @@ section > p {
 
 /* sidebar */
 .sidebar {
-    height: calc(100vh - 90px);
     flex-shrink: 0;
     background-color: var(--bg-sidebar);
     min-height: 200px;
@@ -225,10 +224,12 @@ border-bottom: var(--border-green) 2px solid;
 }
     /* items */
 .item {
+    width: calc(50% - 1rem);
     margin-right: 1rem;
     margin-bottom: 1rem;
     text-align: center;
     align-self: flex-start;
+
 }
 .item .cover-box{
     position: relative;
@@ -280,7 +281,6 @@ h4 {
 
 /* footer */
 #player {
-    height: 90px;
     background-color: var(--bg-footer);
     padding: 0px 0.5rem;
 }
@@ -323,21 +323,7 @@ h4 {
     /* slider end */
 
     /* left side */
-#player .left ,#player .right {
-    width: 220px;
-    min-width: 150px;
-}
-#player .left .cover {
-    width: 20%;
-    min-width: 50px;
-}
-#player .left img {
-    width: 100%;
-}
-#player .left .title{
-    margin-left: 0.25rem;
-    width: 45%;
-}
+
 #player h3 {
     font-size: 0.9rem;
 }
@@ -348,9 +334,7 @@ h4 {
     color: var(--text-white);
     text-decoration: underline;
 }
-#player .left .btns {
-    width: 25%;
-}
+
 #player .left .btns a {
     margin: 0.25rem;
     color: var(--text-gray);
@@ -363,22 +347,13 @@ h4 {
     min-width: 250px;
     margin: 0 0.5rem;
 }
-#player .top{
-    margin: 0 auto;
-    padding-bottom: 0.5rem;
-    width: 250px;
-}
 #player .play-button{
     font-size: 2rem;
 }
 #player .play-button:hover{
     transform: scale(1.1);
 }
-#player .bottom {
-    min-width: 250px;
-    max-width: 50%;
-    margin: 0 auto;
-}
+
 #player .bottom span {
     font-size: 0.6rem;
     margin: 0 0.3rem;
@@ -387,49 +362,69 @@ h4 {
     width: 25%;
 }
     /* right side */
-#player .right > * {
-    width: 15%;
-}
-#player .right .volume {
-    min-width: 80px;
-}
-#player .right .slider {
-    width: 70%;
-    vertical-align: middle;
-}
+
 #volume-bar .progress {
     width: 80%;
 }
 
-
-
 /* only mobile view rules */
-.sidebar {
-    text-align: center;
-    width: 50px;
-}
-.logo img {
-    height: 25px;
-}
 
-.cta {
-    width: calc(100% - 50px);
-}
+@media screen and (max-width: 575px) {
 
-.item {
-    width: calc(50% - 1rem);
-}
-
-body .s-view {
-    display: none;
-}
-
-#current-track {
-    max-width: 60%;
-}
-
-footer {
-    overflow-x: auto;
+    .sidebar, main{
+        height: calc(100vh - 150px);
+    }
+    .sidebar {
+        text-align: center;
+        width: 50px;
+    }
+    .logo img {
+        height: 25px;
+    }
+    .cta {
+        width: calc(100% - 50px);
+    }
+     #player {
+        overflow-x: auto;
+        height: 150px;
+        display: block;
+        padding: 0 0.5rem;
+    }
+    #player .cover {
+        width: 40px;
+        display: none;
+    }
+    #player img {
+        width: 100%;
+    }
+    #player .right, .debug #player .left {
+        width: 100%;
+        min-width: 200px;
+        margin: 0.5rem 0;
+    }
+    #player .left .title {
+        flex-grow: 1;
+        margin-left: 0.5rem;
+    }
+    #player .right {
+        /* justify-content: flex-end; */
+    }
+    #player .playlist, #player .screen {
+        margin: 0 10px;
+    }
+    #player .volume {
+        width: 30%;
+        flex-grow: 0;
+        display: none;
+    }
+    #player .top {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 0.25rem;
+    }
+    body .s-view {
+        display: none;
+    }
 }
 
 /* RESPONSIVE*/
@@ -442,6 +437,7 @@ footer {
     }
 
     .sidebar {
+        height: calc(100vh - 90px);
         width: 230px;
         text-align: left;
         padding: 5px 0;
@@ -515,6 +511,47 @@ footer {
         display: none;
     }
 
+    #player {
+        height: 90px;
+    }
+    #player .left ,#player .right {
+        width: 220px;
+        min-width: 150px;
+    }
+    #player .left .cover {
+        width: 20%;
+        min-width: 50px;
+    }
+    #player .left img {
+        width: 100%;
+    }
+    #player .left .title{
+        margin-left: 0.25rem;
+        width: 45%;
+    }
+    #player .left .btns {
+        width: 25%;
+    }
+    #player .top{
+        margin: 0 auto;
+        padding: 0 0.5rem 0.5rem;
+        width: 250px;
+    }
+    #player .bottom {
+        min-width: 250px;
+        max-width: 60%;
+        margin: 0 auto;
+    }
+    #player .right > * {
+        width: 15%;
+    }
+    #player .right .volume {
+        min-width: 80px;
+    }
+    #player .right .slider {
+        width: 70%;
+        vertical-align: middle;
+    }
 }
 
 
@@ -533,7 +570,7 @@ footer {
 }
 
 /* cta disappearing */
-@media screen and (max-height: 450px), screen and (orientation: landscape) {
+@media screen and (max-height: 450px), screen and (orientation: landscape) and (max-width: 767px) {
     .cta {
         transition: top 1s;
         top: -90px;
